@@ -4,9 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Decodificador de Texto</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css">
 </head>
 <body>
-  <header></header>
+  <main class="container_all">
+    <a class="logo" href="home"><img src="public/images/logo.svg" alt="logo da alura"></a>
+    <div class="container_criptografar"> 
+      <div class="container_criptografar_texto">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
+      </div>
+
+      <div class="container_criptografar__alert_btn">
+        <a class="alert"><img src="public/images/bi-exclamation-circle-fill.svg" alt="exclamação">Apenas letras minúsculas e sem acento.</a>
+        <div class="container_criptografar__alert_btn_btns">
+          <button class="btn_criptografar">Criptografar</button>
+          <button class="btn_decriptografar">Decriptografar</button>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container_resultado"> 
+      <div class="container_resultado_img">
+        <img class="container_resultado_img_imagem" src="public/images/high-quality-products-11.svg" alt="busca">
+        <div class="container_resultado_img_texto">
+          <h1 class="container_resultado_img_texto_h1">Nenhuma mensagem encontrada</h1>
+          <p class="container_resultado_img_texto_p">Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+      </div>    
+      <div>
+        <div class="container_resultado_texto">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
+        </div>
+        <div class="container_resultado_btn">
+          <button class="container_resultado_btn_copiar">Copiar</button>
+        </div>        
+      </div>     
+    </div>    
+  </main>
+
+  <footer> <p>informações pessoais</p> </footer>
   
+  <script src="js/index.js"></script>
 </body>
 </html>
