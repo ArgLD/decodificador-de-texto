@@ -1,49 +1,62 @@
-let entradaTexto = document.getElementById("entrada-texto");
-let btnCriptografar = document.getElementById("btn-criptografar");
-let btnDecriptografar = document.getElementById("btn-decriptografar");
-let resultado = document.getElementById("resposta-resultado-texto");
-let btnCopia = document.getElementById("btn-copiar");
-document.getElementById("resposta-resultado-texto").style.display = "none";
-document.getElementById("btn-copiar").style.display = "none";
+let entradaTexto = document.getElementById("entradaTexto");
+let codificar = document.getElementById("btnCodifica");
+let descodificar = document.getElementById("btnDescodifica");
+let resultado = document.getElementById("saida");
+let btnCopia = document.getElementById("copiar");
 
-
-function criptografar() {  
-  let textoCriptografado = entradaTexto.value;
-  let resultadoTexto = textoCriptografado
-    .replaceAll("e", "enter")
-    .replaceAll("i", "imes")
-    .replaceAll("a", "ai")
-    .replaceAll("o", "ober")
-    .replaceAll("u", "ufat");
-  resultado.value = resultadoTexto;
-
-  document.getElementById("container-resultado-img-ativo").style.display = "none";  
-  document.getElementById("btn-copiar").style.display = "show";
-  document.getElementById("btn-copiar").style.display = "inherit";
-  document.getElementById("resposta-resultado-texto").style.display = "show";
-  document.getElementById("resposta-resultado-texto").style.display = "inherit";
+function criptografar() {    
+  
+    if (/\S/.test(entradaTexto.value)) {
+      let textoCriptografado = entradaTexto.value;
+      let resultadoTexto = textoCriptografado
+        .replaceAll("e", "enter")
+        .replaceAll("i", "imes")
+        .replaceAll("a", "ai")
+        .replaceAll("o", "ober")
+        .replaceAll("u", "ufat");
+      resultado.value = resultadoTexto;
+    
+      document.getElementById("ativo").style.display = "none";
+      document.getElementById("texto1").style.display = "none";
+      document.getElementById("texto2").style.display = "none";
+      document.getElementById("copiar").style.display = "show";
+      document.getElementById("copiar").style.display = "inherit";
+      document.getElementById("saida").style.display = "show";
+      document.getElementById("saida").style.display = "inherit";
+    }
+    else {
+      window.location.reload()    
+    }
 }
 
-btnCriptografar.onclick = criptografar;
+codificar.onclick = criptografar;
 
 function decriptografar() {  
-  let textoDecriptografado = entradaTexto.value;
-  let resultadoTexto = textoDecriptografado
-    .replace(/ufat/g, "u")
-    .replace(/ober/g, "o")
-    .replace(/ai/g, "a")
-    .replace(/imes/g, "i")
-    .replace(/enter/g, "e");
-  resultado.value = resultadoTexto;
 
-  document.getElementById("container-resultado-img-ativo").style.display = "none";  
-  document.getElementById("btn-copiar").style.display = "show";
-  document.getElementById("btn-copiar").style.display = "inherit";
-  document.getElementById("resposta-resultado-texto").style.display = "show";
-  document.getElementById("resposta-resultado-texto").style.display = "inherit";
+  if (/\S/.test(entradaTexto.value)){
+    let textoDescriptografado = entradaTexto.value;
+    let resultadoTexto = textoDescriptografado
+      .replace(/ufat/g, "u")
+      .replace(/ober/g, "o")
+      .replace(/ai/g, "a")
+      .replace(/imes/g, "i")
+      .replace(/enter/g, "e");
+    resultado.value = resultadoTexto;
+  
+    document.getElementById("ativo").style.display = "none";
+    document.getElementById("texto1").style.display = "none";
+    document.getElementById("texto2").style.display = "none";
+    document.getElementById("copiar").style.display = "show";
+    document.getElementById("copiar").style.display = "inherit";
+    document.getElementById("saida").style.display = "show";
+    document.getElementById("saida").style.display = "inherit";
+  }
+  else {
+    window.location.reload()    
+  }
 }
 
-btnDecriptografar.onclick = decriptografar;
+descodificar.onclick = decriptografar;
 
 function copy() {
   if (resultado.value !== "") {
@@ -51,7 +64,7 @@ function copy() {
     resultado.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(resultado.value);
 
-    alert(resultado.value + " foi copiado!");
+    alert(resultado.value + " copiado com sucesso!");
   }
 }
 
