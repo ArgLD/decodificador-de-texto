@@ -1,4 +1,4 @@
-# decodificador-de-texto
+# Decodificador de Texto - Challenge ONE
 Um codificador e decodificador de texto construído usando JS, HTML e CSS.
 
 #link
