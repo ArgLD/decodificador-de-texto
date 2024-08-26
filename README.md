@@ -13,14 +13,14 @@ A letra "u" é convertida para "ufat"
 E as entradas devem ser apenas em letras minúsculas e sem acentos.
 
 # Exemplo:
-"hello world" => "henterllober woberrld"
-"henterllober woberrld" => "hello world"
+- "hello world" => "henterllober woberrld"
+- "henterllober woberrld" => "hello world"
 
 # Requisitos:
-- Deve funcionar apenas com letras minúsculas
-- Não devem ser utilizados letras com acentos nem caracteres especiais
-- Deve ser possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original.
-- A página deve ter campos para inserção do texto a ser criptografado ou descriptografado, e a pessoa usuária deve poder escolher entre as duas opções
+- Deve funcionar apenas com letras minúsculas;
+- Não devem ser utilizados letras com acentos nem caracteres especiais;
+- Deve ser possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original;
+- A página deve ter campos para inserção do texto a ser criptografado ou descriptografado, e a pessoa usuária deve poder escolher entre as duas opções;
 - O resultado deve ser exibido na tela.
 
 
